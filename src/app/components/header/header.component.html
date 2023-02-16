@@ -1,0 +1,26 @@
+<div class="header">
+    <div [routerLink]="['/home']" class="logo-container">
+        <!-- <a href="#" class="nav-logo">Portfo<span>lio.</span></a> -->
+        <img  src="/assets/images/Logotipo Logo Marca personal Pastel Amarillo.png" alt="" srcset="">
+    </div>
+
+    <nav class="header-nav">
+        <a [routerLink]="['/home']" routerLinkActive="active">Home</a>     
+        <a [routerLink]="['/About']" routerLinkActive="active">About</a>
+        <a  [routerLink]="['/Skills']" routerLinkActive="active">Skills</a>
+        <a [routerLink]="['/Portfolio']" routerLinkActive="active">Portfolio</a>
+        <a [routerLink]="['/Contact']" routerLinkActive="active">Contact</a>
+     </nav>
+
+    <div (click)="changeBurger()" class="header__burger">
+        <i class="fa fa-bars" style="font-size:48px; color:var(--dark-green)"></i>
+    </div>
+</div>
+<div class="show-menu" [ngClass]="{active: burger}">
+        <a [routerLink]="['/home']" (click)="changeBurger()">Home</a>     
+        <a [routerLink]="['/About']" (click)="changeBurger()">About</a>
+        <a  [routerLink]="['/Skills']" (click)="changeBurger()">Skills</a>
+        <a [routerLink]="['/Portfolio']" (click)="changeBurger()">Portfolio</a>
+        <a [routerLink]="['/Contact']" (click)="changeBurger()">Contact</a>
+</div>
+
