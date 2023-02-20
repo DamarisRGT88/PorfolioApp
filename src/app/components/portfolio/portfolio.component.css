@@ -124,22 +124,20 @@ section .title::before {
 
 
 
+
 }
 
 
 
 .buttons a {
     text-decoration: none;
-
-
-
-}
-
-.buttons img {
-    width: 40px;
-
+    font-size: 30px;
 
 }
+
+
+
+
 
 @media (min-width: 768px) {
     .portfolio-container {
