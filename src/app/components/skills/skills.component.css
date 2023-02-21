@@ -1,13 +1,19 @@
 section {
     padding: 100px 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--light-pink);
+    min-height: 100vh;
+
 }
 
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
+}
+
+.skills {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-pink);
+
 }
 
 .section-title {
@@ -87,7 +93,7 @@ section {
 }
 
 .skills-blob img {
-    width: 40px;
+    width: 3.5rem;
 
 }
 

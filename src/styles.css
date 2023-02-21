@@ -1,22 +1,2 @@
-/*fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Comic+Neue&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-@import "~swiper/swiper-bundle";
-
-
-/*.VARIABLES.*/
-
-:root {
-    --coral: #F7B19D;
-    --light-pink: #ECCABD;
-    --yellow: #E9B567;
-    --smoke: #A3B2B6;
-    --green: #BED0CA;
-    --dark-green: #5D9090;
-
-    /* #b662d3
-    #feedaa */
-
-
-
-
-}
+@import url(./assets/partials/_variables.css);
+@import url(./assets/partials/_reset.css);
