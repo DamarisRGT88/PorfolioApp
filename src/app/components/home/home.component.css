@@ -1,3 +1,5 @@
+/* Style container principal */
+
 .home {
     display: flex;
     background-color: var(--light-pink);
@@ -18,6 +20,7 @@
 
 }
 
+/* Textos de presentación */
 
 .home .home-content .text1 {
     font-size: 27px;
@@ -64,6 +67,8 @@
     background-color: none;
 }
 
+/* Iconos Social */
+
 .home .home-content .social {
     display: flex;
     font-size: 35px;
@@ -86,7 +91,7 @@
 
 
 
-
+/* Logo */
 
 .home .banner {
     display: none;
@@ -99,6 +104,7 @@
 
 }
 
+/* Media Query */
 @media only screen and (min-width:1234px) {
     .home .banner {
         display: block;

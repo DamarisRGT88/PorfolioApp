@@ -1,9 +1,13 @@
 <div class="header">
+
+    <!-- LOGO -->
+
     <div [routerLink]="['/home']" class="logo-container">
         <!-- <a href="#" class="nav-logo">Portfo<span>lio.</span></a> -->
-        <img  src="/assets/images/Logotipo Logo Marca personal Pastel Amarillo.png" alt="" srcset="">
+        <img  src="/assets/images/Logotipo Logo Marca personal Pastel Amarillo.png" alt="logo persolanal" srcset="">
     </div>
     
+<!-- MENÚ DE NAVEGACIÓN -->
 
     <nav class="header-nav">
           
@@ -12,12 +16,19 @@
         <a  [routerLink]="['/Skills']" routerLinkActive="active">Skills</a>
         <a [routerLink]="['/Portfolio']" routerLinkActive="active">Portfolio</a>
         <a [routerLink]="['/Contact']" routerLinkActive="active">Contact</a>
-     </nav>
+    </nav>
+
+     <!-- BURGER -->
 
     <div (click)="changeBurger()" class="header__burger">
-        <i class="fa fa-bars" style="font-size:48px; color:var(--dark-green)"></i>
+        <i class="fa fa-bars" ></i>
     </div>
+
 </div>
+
+
+<!-- MENÚ que aparece cuando sale la BURGER -->
+
 <div class="show-menu" [ngClass]="{active: burger}">
         <a [routerLink]="['/home']" (click)="changeBurger()">Home</a>     
         <a [routerLink]="['/About']" (click)="changeBurger()">About</a>

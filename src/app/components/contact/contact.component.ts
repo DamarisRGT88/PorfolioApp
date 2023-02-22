@@ -20,17 +20,22 @@ export class ContactComponent implements OnInit {
   ) {
     this.datos = new FormGroup({
       nameContact: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(20)
       ]),
       emailContact: new FormControl('', [
         Validators.required,
         Validators.email
       ]),
       subjectContact: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(50)
       ]),
       textContact: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.minLength(2)
       ])
 
     })
@@ -61,5 +66,13 @@ export class ContactComponent implements OnInit {
       this.confirmacion = response.success
     }
 
+  }
+
+  checkControl(pControlName: string, pError: string): boolean {
+    if (this.datos.get(pControlName)?.hasError(pError) && this.datos.get(pControlName)?.touched) {
+      return true
+    } else {
+      return false
+    }
   }
 }

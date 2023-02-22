@@ -1,18 +1,31 @@
 /* navbar style */
 
+/* Style del container principla */
+
 .header {
     width: 100%;
     position: sticky;
     background: #fff;
     display: flex;
-    font-family: 'Ubuntu',
-        sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     justify-content: space-between;
     align-items: center;
+}
+
+/* LOGO */
+
+.logo-container {
+    display: flex;
+    cursor: pointer;
 
 }
 
+.logo-container img {
+    width: 150px;
 
+}
+
+/* MENÚ DE NAVEGACIÓN */
 
 .header-nav {
     display: none;
@@ -30,41 +43,24 @@
     font-size: 25px;
     font-weight: 500;
     margin-left: 25px;
-
-}
-
-.logo-container {
-    display: flex;
-    /* margin: 3rem; */
-    cursor: pointer;
-
-}
-
-.logo-container img {
-    width: 150px;
-
-}
-
-.nav-logo {
-    font-size: 35px;
-    font-weight: 600;
-    color: var(--dark-green);
-    text-decoration: none;
-}
-
-
-
-.header__burger {
-    width: 4rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    /* margin-right: auto; */
-    margin-left: auto;
 }
 
 .header .active {
     color: var(--dark-green);
 }
+
+/* BURGER */
+
+.header__burger {
+    width: 4rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    color: var(--dark-green);
+    font-size: 48px;
+}
+
+/* MENÚ DE NAV que aparece con la burger */
 
 .show-menu {
     position: fixed;
@@ -104,6 +100,8 @@
 .active {
     transform: translate(0, 0);
 }
+
+/* Media Query */
 
 
 @media only screen and (min-width:500px) and (max-width:800px) {}

@@ -6,7 +6,7 @@ import { lastValueFrom } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  private baseUrl: string = 'http://localhost:3000/users/'
+  private baseUrl: string = 'https://send-mail-98pr.onrender.com'
 
   constructor(
     private httpClient: HttpClient

@@ -30,6 +30,17 @@
 
  }
 
+ section {
+     padding: 100px 0;
+     min-height: 100vh;
+ }
+
+ .max-width {
+     max-width: 1300px;
+     padding: 0 80px;
+     margin: auto;
+ }
+
 
 
  img,
@@ -80,4 +91,27 @@
      font-weight: 500;
 
 
+ }
+
+ section .title {
+     position: relative;
+     text-align: center;
+     font-size: 40px;
+     font-weight: 500;
+     margin-bottom: 60px;
+     padding-bottom: 20px;
+     font-family: 'Ubuntu', sans-serif;
+     color: var(--dark-green)
+ }
+
+ section .title::before {
+     content: "";
+     position: absolute;
+     bottom: 0px;
+     left: 50%;
+     width: 180px;
+     height: 3px;
+     background: #111;
+     transform: translateX(-50%);
+     background: var(--dark-green);
  }

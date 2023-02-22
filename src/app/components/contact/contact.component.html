@@ -2,9 +2,12 @@
         <div class="max-width">
             <h2 class="title">Contact me</h2>
             <div class="contact-content">
+                <!-- Izquierda. Información de contacto -->
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                    <p>Si quieres ponerte en contacto conmigo, puedes hacerlo a través de esta tarjeta de contacto, o a través de LinkedIn, donde también encontrarás mi número de teléfono. Contestaré lo más rápido posible. Muchas gracias.</p>
+
+                    <!--Iconos + Datos  -->
                     <div class="icons">
                         <div class="row">
                             <i class="icon fa-solid fa-user"></i>
@@ -13,6 +16,7 @@
                                 <div class="sub-title">Dámaris</div>
                             </div>
                         </div>
+
                         <div class="row">
                             <i class="icon fas fa-map-marker-alt"></i>
                             <div class="info">
@@ -20,6 +24,7 @@
                                 <div class="sub-title">Toledo, Spain</div>
                             </div>
                         </div>
+
                         <div class="row">
                             <i class="icon fas fa-envelope"></i>
                             <div class="info">
@@ -27,32 +32,56 @@
                                 <div class="sub-title">damarisraboso@gmail.com</div>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
+                <!-- Tarjeta de contacto -->
                 <div class="column right">
                     <div class="text">Message me</div>
-                    
+
+                    <!-- Formulario -->
+
                     <form (ngSubmit)="getData()" [formGroup]="datos">
                         <div class="form-group fields">
                             <div class="field name">
                                 <input type="text" placeholder="Name"  class="form-control" formControlName="nameContact" >
+                                
                             </div>
+
                             <div class="field email">
                                 <input type="email" placeholder="Email"  class="form-control" formControlName="emailContact" >
                             </div>
+
                         </div>
+
                         <div class="field">
                             <input type="text" placeholder="Subject"  class="form-control" formControlName="subjectContact"  >
                         </div>
+
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.."  class="form-control" formControlName="textContact" ></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message..."  class="form-control" formControlName="textContact" ></textarea>
                         </div>
+
+                        <!-- Mensajes de error -->
+
+                        <p class="error" *ngIf="checkControl('nameContact','minlength')">El campo "Name" tiene que tener mínimo 2 caracteres</p>
+                        <p class="error" *ngIf="checkControl('nameContact','maxlength')">El campo "Name" tiene que tener máximo 20 caracteres</p>
+                        <p class="error" *ngIf="checkControl('subjectContact','minlength')">El campo "Subject" tiene que tener mínimo 2 caracteres</p>
+                        <p class="error text-white" *ngIf="checkControl('subjectContact','maxlength')">El campo "Subject" tiene que tener máximo 50 caracteres</p>
+                        <p class="error" *ngIf="checkControl('emailContact','required')">El campo "Email" es obligatorio</p>
+                        <p class="error" *ngIf="checkControl('textContact','minlength')">El campo "Message" tiene que tener mínimo 2 caracteres</p>
+
+                        <!-- Botón de envío -->
+
                         <div class="button-area">
                             <button type="submit" [disabled]="!datos.valid" (click)="envioCorreo()">Send message</button>
                         </div>
+
                         <div  *ngIf="confirmacion">
-            <p >{{confirmacion}}</p>
-          </div>
+                        <p >{{confirmacion}}</p>
+                        </div>
+
                     </form>
                 </div>
             </div>
