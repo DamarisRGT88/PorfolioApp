@@ -41,9 +41,9 @@
 
 .skills-info {
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 2rem 2rem; */
+    gap: .5em .5em;
     margin-bottom: 5rem;
-    row-gap: 1rem;
+    row-gap: 2rem;
 
 }
 
@@ -81,7 +81,7 @@
 /* Nivel de tecnología */
 
 .skills-subtitle {
-    /* font-size: ; */
+    font-size: 1rem;
     color: var(---black);
     margin-bottom: 1rem;
 }
