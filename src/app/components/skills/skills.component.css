@@ -6,6 +6,8 @@
 }
 
 
+
+
 /* Títulos de los diferentes apartados */
 
 .skills-title {
@@ -32,13 +34,16 @@
 .skills-data,
 .skills-blob {
     display: grid;
+    justify-content: center;
+
 }
 
 
 .skills-info {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem 2rem;
+    /* gap: 2rem 2rem; */
     margin-bottom: 5rem;
+    row-gap: 1rem;
 
 }
 
